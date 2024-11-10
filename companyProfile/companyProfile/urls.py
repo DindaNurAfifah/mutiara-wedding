@@ -21,5 +21,9 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("wedding.urls")),
+<<<<<<< HEAD
     path("__reload__/", include("django_browser_reload.urls")),
+=======
+    path("__reload__", include("django_browser_reload.urls")),
+>>>>>>> 50c2b05d77617833c97528e9f82746332b9f9372
 ]
