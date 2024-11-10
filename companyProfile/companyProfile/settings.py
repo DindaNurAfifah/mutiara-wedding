@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "wedding",
     "tailwind",
-    "theme"
+    "theme",
+    "django_browser_reload",
 ]
 
 TAILWIND_APP_NAME = "theme"
@@ -74,6 +75,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "companyProfile.wsgi.application"
 
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

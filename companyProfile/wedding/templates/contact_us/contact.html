@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mutiara Wedding - Contact Us</title>
+    <!-- Tailwind CSS -->
+    {% load static %} {% load tailwind_tags %} {% tailwind_css %}
+  </head>
+  <body class="bg-[#FBF7F6]">
+    <!-- Navigation -->
+    <nav class="bg-white p-4 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex justify-start h-24 ps-12">
+          <img src="{% static 'images/logo.png' %}" alt="" />
+        </div>
+        <div class="space-x-7 pe-12 me-5">
+          <a href="#" class="text-gray-600">Home</a>
+          <a href="#" class="text-gray-600">About</a>
+          <a href="#" class="text-gray-600">Gallery</a>
+          <a href="#" class="text-gray-600">Team</a>
+          <a href="#" class="text-gray-600">Services</a>
+        </div>
+        <a
+          href="#"
+          class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal"
+          >Book Now</a
+        >
+      </div>
+          
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl font-semibold mb-2">Contact Us</h1>
+          <p class="text-gray-600">Ready to start your wedding journey?</p>
+          <p class="text-gray-600">
+            Connect with us, and let's create unforgettable moments together.
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div
+          class="max-w-2xl mx-auto bg-white rounded-lg shadow-sm border p-8 mb-12"
+        >
+          <form method="POST" class="space-y-6">
+            {% csrf_token %}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brown-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brown-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brown-300"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brown-300"
+                />
+              </div>
+            </div>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="4"
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brown-300"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-[#7A5C54] text-white px-8 py-2 rounded-md hover:bg-[#7A5C54] transition-colors hover:font-bold transition-colors"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center border border-gray-300 p-4 rounded-md shadow-lg"
+          >
+            <h3 class="font-semibold mb-2">E-mail</h3>
+            <p class="text-gray-600">info@mutiarawedding.com</p>
+          </div>
+          <div
+            class="text-center border border-gray-300 p-4 rounded-md shadow-lg"
+          >
+            <h3 class="font-semibold mb-2">Phone Number</h3>
+            <p class="text-gray-600">+62 123 456 789</p>
+          </div>
+          <div class="text-center border border-gray-300 p-4 rounded-md shadow-lg">
+            <h3 class="font-semibold mb-2">Social Media</h3>
+            <div class="flex justify-center space-x-4">
+              <a href="#" class="text-gray-600 hover:text-gray-900">
+                <img src="{% static 'images/Instagram.svg' %}" alt="Instagram" class="w-6 h-6">
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-900">
+                <img src="{% static 'images/Twitter.svg' %}" alt="Twitter" class="w-6 h-6">
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-900">
+                <img src="{% static 'images/Youtube.svg' %}" alt="Youtube" class="w-6 h-6">
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <!-- Map and Operating Hours -->
+<div class="mt-12 flex justify-center items-start space-x-8">
+    <!-- Map -->
+    <div class="border rounded-lg overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTknMTEuNiJTIDEwNMKwNDUnNDkuOCJF!5e0!3m2!1sen!2sid!4v1620812345678!5m2!1sen!2sid"
+        width="600"
+        height="500"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  
+    <!-- Operating Hours -->
+    <div class="bg-white p-6 border rounded-lg shadow-md">
+      <h3 class="font-semibold mb-4 text-center">Operational Hours</h3>
+      <p class="text-gray-600 text-center">Monday to Friday: 9 AM - 5 PM</p>
+      <p class="text-gray-600 text-center">Saturday & Sunday: 9 AM - 1 PM</p>
+    </div>
+  </div>
+  
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 mt-12 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <img
+          src="{% static 'images/logo.png' %}"
+          alt="Mutiara Wedding"
+          class="h-8 mx-auto mb-4"
+        />
+        <p class="text-gray-600">
+          Copyright © 2024 Mutiara Wedding. All rights reserved.
+        </p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
