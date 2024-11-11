@@ -4,23 +4,6 @@
 {% load static %}
 {% block content %}
 
-    <!-- Navbar -->
-    <nav class="bg-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex justify-start h-24 ps-12">
-                <img src="{% static 'images/mutiara_fix.png' %}" alt="">
-            </div>
-            <div class="space-x-7 pe-12 me-5">
-                <a href="#" class="text-gray-600">Home</a>
-                <a href="#" class="text-gray-600">About</a>
-                <a href="#" class="text-gray-600">Gallery</a>
-                <a href="#" class="text-gray-600">Team</a>
-                <a href="#" class="text-gray-600">Services</a>
-            </div>
-            <a href="#" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">Book Now</a>
-        </div>
-    </nav>
-
     <!-- Meet Our Team Section -->
     <section class="container mx-auto my-16 text-center">
         <h2 class="text-6xl font-semibold mb-8 text-[#342220]">Meet Our Team</h2>
@@ -148,7 +131,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    {% comment %} <!-- Footer -->
     <footer class="bg-gray-200 p-8 text-center">
         <div class="text-gray-600">&copy; 2024 Mutiara Wedding. All rights reserved</div>
         <div class="mt-4 space-x-4">
@@ -157,6 +140,6 @@
             <a href="#" class="text-gray-600">Facebook</a>
             <a href="#" class="text-gray-600">YouTube</a>
         </div>
-    </footer>
+    </footer> {% endcomment %}
 
 {% endblock %}

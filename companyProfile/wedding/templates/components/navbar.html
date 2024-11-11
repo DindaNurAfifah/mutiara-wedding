@@ -1,0 +1,25 @@
+<nav class="flex flex-row justify-between items-center w-screen h-[130px] text-sm px-8 font-thin">
+    <ul class="">
+        <img src="{{ MEDIA_URL }}/mutiara_logo.png" alt="Mutiara Wedding">
+    </ul>
+    <ul class="flex flex-row justify-center gap-8">
+        <li>
+            <a href="#" class="text-gray-600">Home</a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-600">About</a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-600">Gallery</a>
+        </li>
+        <li>
+            <a href="{% url "team" %}" class="text-gray-600">Team</a>
+        </li>
+        <li>
+            <a href="{% url "services" %}" class="text-gray-600">Services</a>
+        </li>
+    </ul>
+    <ul>
+            <a href="{% url "contact" %}" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">Book Now</a>
+    </ul>
+</nav>
