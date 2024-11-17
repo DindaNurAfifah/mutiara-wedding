@@ -12,7 +12,14 @@ def contact_view(request):
 
 def team_view(request):
     context = {
-        'MEDIA_URL': settings.MEDIA_URL
+        'MEDIA_URL': settings.MEDIA_URL,
+        'card_team' : [
+            {"name" : "Anandiaz Agung Pradana", "Position" : "Leader", 'image' : 'anan.png'},
+            {"name" : "Ryan Jusniansyah", "Position" : "Vice Leader", "image" : "aku.png"},
+            {"name" : "Dinda Nur Afifah", "Position" : "Member 1", "image" : "Mbadinda.png"},
+            {"name" : "Rafly Genta Pratama", "Position" : "Member 2", "image" : "Genta.png"},
+            {"name" : "Gusti Dimas Novarossi", "Position" : "Member 3", "image" : "Banggusti.png"}
+        ]
     }
     return render(request, 'team/team.html', context)
 
