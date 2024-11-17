@@ -13,7 +13,7 @@
 <body class="h-screen flex flex-col">
     {% include 'components/navbar.html' %}
 
-    <div class="flex-grow bg-[#FBF7F6]">
+    <div class="flex-grow {% block background_class %}bg-[#FBF7F6]{% endblock %}">
         {% block content %}
         {% endblock %}
     </div>

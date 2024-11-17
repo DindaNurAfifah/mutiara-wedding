@@ -16,6 +16,12 @@ def team_view(request):
     }
     return render(request, 'team/team.html', context)
 
+def home_view(request):
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL
+    }
+    return render(request, 'homepage/homepage.html', context)
+
 def about_view(request):
     context = {
         'MEDIA_URL': settings.MEDIA_URL
