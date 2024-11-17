@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto py-10 px-4">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Our Wedding Photo Gallery</h1>
+    <p class="text-gray-600 mb-8">With a glimpse of love, laughter, and happily ever after. Discover the memories we cherish in our Gallery.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Replace with dynamic content -->
+        {% for image in images %}
+        <div class="overflow-hidden rounded-lg shadow-lg bg-white">
+            <img src="{{MEDIA_URL}}{{ image.url }}" alt="Wedding Photo" class="w-full h-56 object-cover">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}

@@ -35,6 +35,18 @@ def about_view(request):
     }
     return render(request, 'about_us/about.html', context)
 
+def gallery_view(request):
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+        'images' :  [
+            {'url': 'gallery1.png'},
+            {'url': 'gallery2.png'},
+            {'url': 'gallery3.png'},
+        ]
+    }
+    return render(request, 'gallery/gallery.html', context)
+
+
 def services_view(request):
     context = {
         'MEDIA_URL': settings.MEDIA_URL,

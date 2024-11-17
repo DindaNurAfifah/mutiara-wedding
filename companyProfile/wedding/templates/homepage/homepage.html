@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<div class="w-full">
+<div class="w-full bg-[#FBF7F6] pb-10">
   <div class="flex items-center justify-center px-6">
     <h1 class="mt-8 text-pretty text-3xl font-medium text-black sm:text-4xl">
       Testimonials
@@ -36,36 +36,224 @@
     <div class="relative">
         <!-- Scroll container -->
         <div class="overflow-x-auto scrollbar-hide flex gap-4 snap-x snap-mandatory py-4">
-            <!-- Example cards - In Django you would use a for loop here -->
-            <div class="snap-start flex-shrink-0 w-64">
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h3 class="font-bold text-lg">Card 1</h3>
-                    <p class="text-gray-600">Content for card 1</p>
-                </div>
-            </div>
-            
-            <div class="snap-start flex-shrink-0 w-64">
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h3 class="font-bold text-lg">Card 2</h3>
-                    <p class="text-gray-600">Content for card 2</p>
-                </div>
-            </div>
-            
-            <div class="snap-start flex-shrink-0 w-64">
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h3 class="font-bold text-lg">Card 3</h3>
-                    <p class="text-gray-600">Content for card 3</p>
-                </div>
-            </div>
-            
-            <div class="snap-start flex-shrink-0 w-64">
-                <div class="bg-white rounded-lg shadow-md p-4">
-                    <h3 class="font-bold text-lg">Card 4</h3>
-                    <p class="text-gray-600">Content for card 4</p>
-                </div>
-            </div>
+            <!-- Card 1 -->
+            <div class="snap-start flex-shrink-0 w-80">
+              <div class="p-4 bg-white rounded-lg shadow-md">
+                  <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0">
+                          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                              <span class="text-gray-500 text-sm">L</span>
+                          </div>
+                      </div>
+                      <div class="flex flex-col">
+                          <h3 class="font-semibold text-gray-900">
+                              Lily & Ryan
+                          </h3>
+                          <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                              Thank you, Mutiara Wedding, for making our wedding so magical! The decorations were stunning, and the planning process was seamless.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="snap-start flex-shrink-0 w-80">
+              <div class="p-4 bg-white rounded-lg shadow-md">
+                  <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0">
+                          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                              <span class="text-gray-500 text-sm">J</span>
+                          </div>
+                      </div>
+                      <div class="flex flex-col">
+                          <h3 class="font-semibold text-gray-900">
+                              John & Sarah
+                          </h3>
+                          <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                              Our wedding day was perfect! Every detail was taken care of with such attention. Highly recommend their services.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="snap-start flex-shrink-0 w-80">
+              <div class="p-4 bg-white rounded-lg shadow-md">
+                  <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0">
+                          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                              <span class="text-gray-500 text-sm">M</span>
+                          </div>
+                      </div>
+                      <div class="flex flex-col">
+                          <h3 class="font-semibold text-gray-900">
+                              Mike & Emma
+                          </h3>
+                          <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                              The team went above and beyond our expectations. The venue looked absolutely breathtaking!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="snap-start flex-shrink-0 w-80">
+              <div class="p-4 bg-white rounded-lg shadow-md">
+                  <div class="flex items-start gap-3">
+                      <div class="flex-shrink-0">
+                          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                              <span class="text-gray-500 text-sm">D</span>
+                          </div>
+                      </div>
+                      <div class="flex flex-col">
+                          <h3 class="font-semibold text-gray-900">
+                              David & Amy
+                          </h3>
+                          <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                              Professional service from start to finish. They made our dream wedding come true!
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
+</div>
+
+<div class="grid grid-cols-12">
+  <div class="col-span-8">
+    <!-- Left column content (roughly 70%) -->
+    <div class="relative min-h-screen">
+      <div class="absolute inset-0"> <!-- Removed aria-hidden -->
+        <div class="bg-services h-full w-full bg-cover bg-center bg-no-repeat"></div>
+      </div>
+    
+      <!-- Content container -->
+      <div class="relative z-10 flex min-h-screen items-center justify-center px-6"> <!-- Added z-10 and relative -->
+        <div class="max-w-2xl text-center bg-black/[.25] rounded-xl py-6">
+          <p class="mt-8 text-pretty text-3xl font-medium text-white sm:text-4xl">
+            Your Journey to Forever Starts Here!
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="{% url 'services' %}" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">
+              Explore Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-span-4 bg-[#FBF7F6] ps-4">
+    <!-- Right column content (roughly 30%) -->
+    <div class="flex flex-col gap-4 py-4">
+      <!-- Example cards - In Django you would use a for loop here -->
+      <!-- Card 1 -->
+      <div class="w-full">
+          <div class="p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0">
+                      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <span class="text-gray-500 text-sm">L</span>
+                      </div>
+                  </div>
+                  <div class="flex flex-col">
+                      <h3 class="font-semibold text-gray-900">
+                          Lily & Ryan
+                      </h3>
+                      <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                          Thank you, Mutiara Wedding, for making our wedding so magical! The decorations were stunning, and the planning process was seamless.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="w-full">
+          <div class="p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0">
+                      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <span class="text-gray-500 text-sm">J</span>
+                      </div>
+                  </div>
+                  <div class="flex flex-col">
+                      <h3 class="font-semibold text-gray-900">
+                          John & Sarah
+                      </h3>
+                      <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                          Our wedding day was perfect! Every detail was taken care of with such attention. Highly recommend their services.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="w-full">
+          <div class="p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0">
+                      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <span class="text-gray-500 text-sm">M</span>
+                      </div>
+                  </div>
+                  <div class="flex flex-col">
+                      <h3 class="font-semibold text-gray-900">
+                          Mike & Emma
+                      </h3>
+                      <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                          The team went above and beyond our expectations. The venue looked absolutely breathtaking!
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Card 4 -->
+      <div class="w-full">
+          <div class="p-4 bg-white rounded-lg shadow-md">
+              <div class="flex items-start gap-3">
+                  <div class="flex-shrink-0">
+                      <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <span class="text-gray-500 text-sm">D</span>
+                      </div>
+                  </div>
+                  <div class="flex flex-col">
+                      <h3 class="font-semibold text-gray-900">
+                          David & Amy
+                      </h3>
+                      <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                          Professional service from start to finish. They made our dream wedding come true!
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="w-full bg-[#FBF7F6] pt-6">
+  <div class="flex items-center justify-center px-6">
+    <h1 class="mt-8 text-pretty text-3xl font-medium text-black sm:text-4xl">
+      Gallery
+    </h1>
+  </div>
+  <div class="flex items-center justify-center py-4 gap-4">
+    <img src="{{ MEDIA_URL}}homepage3.png" alt="">
+    <img src="{{ MEDIA_URL}}homepage4.png" alt="">
+    <img src="{{ MEDIA_URL}}homepage5.png" alt="">
+  </div>
+  <div class="flex items-center justify-center px-6 pb-10">
+    <a href="{% url 'services' %}" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">
+      Explore More
+    </a>
+  </div>
+  
 </div>
 
 {% endblock %}
