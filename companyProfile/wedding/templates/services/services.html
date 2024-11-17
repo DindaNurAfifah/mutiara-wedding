@@ -5,8 +5,8 @@
 {% endblock %}
 {% block content %}
     <div class="flex flex-col justify-center items-center px-32 py-16">
-        <h1 class="text-4xl text-[#342220]">Our Services</h1>
-        <h2 class="text-center">Our services are designed to reflect your personal style and love story, creating a celebration that is as memorable as the love it honors. Trust us to handle every detail, so you can enjoy each magical moment with ease.</h2>
+        <h2 class="text-6xl font-semibold mb-8 text-[#342220]">Our Services</h2>
+        <h2 class="text-center px-7 mb-4">Our services are designed to reflect your personal style and love story, creating a celebration that is as memorable as the love it honors. Trust us to handle every detail, so you can enjoy each magical moment with ease.</h2>
         <div class="flex flex-col xl:flex-row justify-center items-center gap-8 my-8">
             <div class="flex flex-col justify-start items-start w-full xl:w-1/2">
                 <h1 class="text-4xl text-[#342220]">Mutiara Wedding Services</h1>
@@ -18,11 +18,11 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 my-8">
             {% for card in cards %}
-                <div class="max-w-72 min-h-[30rem] flex flex-col justify-between items-center text-center gap-2 border-2 border-[#7A5C54] shadow-xl rounded-xl p-3">
-                    <img src="{{ MEDIA_URL }}{{ card.image }}" alt="{{ card.title }}" class="shadow-lg rounded-lg w-full h-auto">
-                    <h2 class="text-2xl">{{ card.title }}</h2>
-                    <p class="text-sm">{{ card.description }}</p>
-                    <a href="{{ card.link }}" class="bg-[#7A5C54] text-white p-4 rounded font-thin">Book Now</a>
+                <div class="max-w-72 min-h-[30.5rem] flex flex-col justify-between items-center text-center gap-2 border-2 border-[#7A5C54] shadow-xl rounded-xl">
+                    <img src="{{ MEDIA_URL }}{{ card.image }}" alt="{{ card.title }}" class="shadow-lg w-full h-auto">
+                    <h2 class="text-2xl mt-1">{{ card.title }}</h2>
+                    <p class="text-sm p-2">{{ card.description }}</p>
+                    <a href="{{ card.link }}" class="bg-[#7A5C54] text-white p-2 mb-1 rounded font-thin hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">Book Now</a>
                 </div>
             {% empty %}
                 <p>No services available at the moment.</p>

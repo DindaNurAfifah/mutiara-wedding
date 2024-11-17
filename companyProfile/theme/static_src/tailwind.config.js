@@ -45,7 +45,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'hero' : "url('/static/images/homepage.png')",
-            }
+            },
+            fontWeight:['visited']
         },
     },
     plugins: [
