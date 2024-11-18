@@ -6,20 +6,20 @@
 
 {% block content %}
 <section id="about-head">
-    <div class="container mx-auto text-center mt-16 mb-10">
-        <h2 class="text-6xl font-semibold mb-8 text-[#342220]">About Us</h2>
-        <p class="text-lg text-[#000000]">Our team is dedicated to making your big day as beautiful as your love story</p>
+    <div>
+        <h1 class="mt-5 text-5xl mx-100 flex items-center justify-center font-semibold ">About Us</h1>
+        <p class="mt-3 flex items-center justify-center font-medium">Our team is dedicated to making your big day as beautiful as your love story</p>
     </div>
 </section>
 
-<section id="about-image">
-    <div class="flex mx-32 justify-center">
-        <img src="{{ MEDIA_URL }}/About_us1.png" alt="" class="w-full">
+<section id="about-image" class="flex justify-center items-center">
+    <div>
+        <img src="{{ MEDIA_URL }}/aboutmutiara.png" alt="" class="mt-5 items-center justify-center max-w-full h-auto">
     </div>
 </section>
 
-<section id="about-visionmision">
-    <div class="mt-5 mx-32">
+<section id="about-visionmision" class="mt-5">
+    <div class="mt-5 mx-64">
         <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Vision & Mission</h2>
             <div class="columns-2 mt-4">
               <p class="pe-10 leading-5 text-justify">
@@ -40,11 +40,11 @@
 </section>
 
 <section id="about-companystory">
-    <div class="mt-5 mx-32">
+    <div class="mt-5 mx-64">
         <div class="columns-2 mt-4">
-            <img src="{{ MEDIA_URL }}/About_us2.png" alt="">
+            <img src="{{ MEDIA_URL }}/company-story.png" alt="" class="h-auto w-[1000px] pe-10">
             <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Company Story</h2>
-            <p class="pe-10 leading-5 text-justify mt-5">
+            <p class="leading-5 text-justify mt-5">
                 Founded by a group of five friends with a shared passion for celebrating love, our wedding organizer was born out of a desire to create meaningful, unforgettable wedding experiences. Each of us brings unique talents and perspectives, from design and planning to coordination and creativity, which together allow us to craft one-of-a-kind celebrations. 
 
                 What started as a small, heartfelt project has blossomed into a full-scale wedding organizing team dedicated to turning dreams into reality. We are proud to bring our combined expertise, enthusiasm, and love for weddings to each couple we work with, ensuring every moment is as special as their love story.
@@ -197,6 +197,62 @@
                 </span>
             </button>
         </div>
+
+        <div class="duration-700 ease-in-out columns-4 px-4 hidden" data-carousel-item>
+
+          <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+            <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+              <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse5.png" alt=""> Siska & Budi
+            </h2>
+            <p class="font-italic text-xs text-[#949494]">
+              Everything was perfect! The flowers, the lighting, the music—it was all amazing. Thanks to Mutiara Wedding, our day was truly unforgettable.
+            </p>
+          </div>
+
+          <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+            <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+              <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse6.png" alt=""> Adi & Maya
+            </h2>
+            <p class="font-italic text-xs text-[#949494]">
+              We loved every moment of working with Mutiara Wedding. Their professionalism and creativity were unmatched. Thank you for making our dreams come true!
+            </p>
+          </div>
+
+          <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+            <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+              <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse7.png" alt=""> Nina & Alex
+            </h2>
+            <p class="font-italic text-xs text-[#949494]">
+              A heartfelt thank you to the Mutiara Wedding team! They made everything stress-free and handled everything with grace and efficiency.
+            </p>
+          </div>
+
+          <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+            <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+              <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse8.png" alt="">Mira & Arif
+            </h2>
+            <p class="font-italic text-xs text-[#949494]">
+              We are so grateful for Mutiara Wedding's incredible support and creativity. Our special day was magical, and we owe it all to their amazing team.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-24 border border-[#7A5C54] bg-[#FBF7F6] group-hover:bg-[#EDE2DE] group-focus:ring-4 group-focus:ring-white">
+          <svg class="w-4 h-4 text-[#7A5C54]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+          </svg>
+        </span>
+      </button>
+      <button type="button" class="absolute top-0 left- 10 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-24 border border-[#7A5C54] bg-[#FBF7F6] group-hover:bg-[#EDE2DE] group-focus:ring-4 group-focus:ring-white">
+          <svg class="w-4 h-4 text-[#7A5C54]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+          </svg>
+        </span>
+      </button>
     </div>
+  </div>
 </section>
 {% endblock %}

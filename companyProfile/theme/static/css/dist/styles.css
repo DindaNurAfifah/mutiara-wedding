@@ -855,6 +855,11 @@ select {
   margin-bottom: 2rem;
 }
 
+.mx-64 {
+  margin-left: 16rem;
+  margin-right: 16rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -917,6 +922,10 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -991,6 +1000,10 @@ select {
   height: 100vh;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .min-h-\[30\.5rem\] {
   min-height: 30.5rem;
 }
@@ -1035,6 +1048,10 @@ select {
   width: 50%;
 }
 
+.w-\[1000px\] {
+  width: 1000px;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1057,6 +1074,10 @@ select {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink-0 {
@@ -1117,6 +1138,11 @@ select {
 .columns-2 {
   -moz-columns: 2;
        columns: 2;
+}
+
+.columns-4 {
+  -moz-columns: 4;
+       columns: 4;
 }
 
 .grid-cols-1 {
@@ -1766,6 +1792,11 @@ select {
 .group:hover .group-hover\:bg-\[\#7A5C54\] {
   --tw-bg-opacity: 1;
   background-color: rgb(122 92 84 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-\[\#EDE2DE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 226 222 / var(--tw-bg-opacity));
 }
 
 .group:focus .group-focus\:ring-4 {
