@@ -1,23 +1,30 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% tailwind_css %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} Logo CDN {% endcomment %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>{% block title %}Your Site Title{% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% comment %}Logo CDN{% endcomment %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <title>
+      {% block title %}
+        Your Site Title
+      {% endblock %}
+    </title>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
-</head>
-<body class="h-screen flex flex-col">
+  </head>
+  <body class="h-screen flex flex-col">
     {% include 'components/navbar.html' %}
 
-    <div class="flex-grow {% block background_class %}bg-[#FBF7F6]{% endblock %} w-screen">
-        {% block content %}
-        {% endblock %}
+    <div class="flex-grow {% block background_class %}
+        bg-[#FBF7F6]
+      {% endblock %} w-screen">
+      {% block content %}
+
+      {% endblock %}
     </div>
 
     {% include 'components/footer.html' %}
-</body>
+  </body>
 </html>
