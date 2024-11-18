@@ -56,107 +56,147 @@
 
 <section class="about-testimonials mb-5">
     <div class="mt-5 mx-32">
-      <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Testimonials</h2>
-      <div id="custom-carousel" class="relative w-full mt-5" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div class="relative h-auto overflow-hidden rounded-lg">
-          <!-- Slide 1 -->
-          <div class="duration-700 ease-in-out grid grid-cols-4 gap-4 px-4 active" data-carousel-item>
-            <!-- Card 1 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse1.png" alt=""> Joko & Sri
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                Thank you, Mutiara Wedding, for making our wedding so magical! The decorations were stunning, and the planning process was seamless.
-              </p>
+        <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Testimonials</h2>
+        
+        <div x-data="{ 
+            activeSlide: 0,
+            slides: [0, 1],  // Two slides with 4 cards each
+            nextSlide() {
+                this.activeSlide = this.activeSlide === this.slides.length - 1 ? 0 : this.activeSlide + 1
+            },
+            prevSlide() {
+                this.activeSlide = this.activeSlide === 0 ? this.slides.length - 1 : this.activeSlide - 1
+            }
+        }" class="relative w-full mt-5">
+            <!-- Carousel wrapper -->
+            <div class="relative h-auto overflow-hidden rounded-lg">
+                <!-- Slide 1 -->
+                <div x-show="activeSlide === 0" 
+                     x-transition:enter="transition transform duration-700"
+                     x-transition:enter-start="translate-x-full"
+                     x-transition:enter-end="translate-x-0"
+                     x-transition:leave="transition transform duration-700"
+                     x-transition:leave-start="translate-x-0"
+                     x-transition:leave-end="-translate-x-full"
+                     class="grid grid-cols-4 gap-4 px-4">
+                    <!-- Card 1 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse1.png" alt=""> 
+                            Joko & Sri
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            Thank you, Mutiara Wedding, for making our wedding so magical! The decorations were stunning, and the planning process was seamless.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse2.png" alt=""> 
+                            Andi & Maya
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            Couldn't have asked for a better wedding planning team. Every detail was perfect!
+                        </p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse3.png" alt=""> 
+                            Rudi & Lisa
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            The team went above and beyond our expectations. Our special day was absolutely perfect.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse4.png" alt=""> 
+                            Denny & Sarah
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            Professional, creative, and attentive to every detail. Highly recommended!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div x-show="activeSlide === 1"
+                     x-transition:enter="transition transform duration-700"
+                     x-transition:enter-start="translate-x-full"
+                     x-transition:enter-end="translate-x-0"
+                     x-transition:leave="transition transform duration-700"
+                     x-transition:leave-start="translate-x-0"
+                     x-transition:leave-end="-translate-x-full"
+                     class="grid grid-cols-4 gap-4 px-4">
+                    <!-- Card 5 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse5.png" alt=""> 
+                            Siska & Budi
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            Everything was perfect! The flowers, the lighting, the music—it was all amazing.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse6.png" alt=""> 
+                            Tono & Maria
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            Our dream wedding came true thanks to the amazing team's dedication and creativity.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 7 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse7.png" alt=""> 
+                            Hadi & Nina
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            The attention to detail was incredible. Every moment was picture perfect!
+                        </p>
+                    </div>
+                    
+                    <!-- Card 8 -->
+                    <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
+                        <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
+                            <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse8.png" alt=""> 
+                            Bambang & Dewi
+                        </h2>
+                        <p class="font-italic text-xs text-[#949494]">
+                            We couldn't be happier with how our wedding turned out. Thank you for everything!
+                        </p>
+                    </div>
+                </div>
             </div>
-            <!-- Card 2 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse2.png" alt=""> Agus & Rania
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                From the initial consultation to the final touches on the big day, Mutiara Wedding exceeded our expectations. Their attention to detail is unparalleled!
-              </p>
-            </div>
-            <!-- Card 3 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse3.png" alt=""> Nana & Balmond
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                Thank you, Mutiara Wedding, for making our wedding so magical! The decorations were stunning, and the planning process was seamless.
-              </p>
-            </div>
-            <!-- Card 4 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse4.png" alt=""> Raze & Phoenix
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                Our wedding day was everything we dreamed of and more! The team at Mutiara Wedding took care of every detail, allowing us to relax and enjoy our special day.
-              </p>
-            </div>
-          </div>
-  
-          <!-- Slide 2 -->
-          <div class="duration-700 ease-in-out grid grid-cols-4 gap-4 px-4 hidden" data-carousel-item>
-            <!-- Card 5 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse5.png" alt=""> Siska & Budi
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                Everything was perfect! The flowers, the lighting, the music—it was all amazing. Thanks to Mutiara Wedding, our day was truly unforgettable.
-              </p>
-            </div>
-            <!-- Card 6 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse6.png" alt=""> Adi & Maya
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                We loved every moment of working with Mutiara Wedding. Their professionalism and creativity were unmatched. Thank you for making our dreams come true!
-              </p>
-            </div>
-            <!-- Card 7 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse7.png" alt=""> Nina & Alex
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                A heartfelt thank you to the Mutiara Wedding team! They made everything stress-free and handled everything with grace and efficiency.
-              </p>
-            </div>
-            <!-- Card 8 -->
-            <div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-[#EDE2DE]">
-              <h2 class="mb-2 text-xs font-bold tracking-tight text-[#342220] flex">
-                <img class="w-8 h-8 rounded-full" src="{{ MEDIA_URL }}/Ellipse8.png" alt=""> Mira & Arif
-              </h2>
-              <p class="font-italic text-xs text-[#949494]">
-                We are so grateful for Mutiara Wedding's incredible support and creativity. Our special day was magical, and we owe it all to their amazing team.
-              </p>
-            </div>
-          </div>
+
+            <!-- Slider controls -->
+            <button @click="prevSlide" type="button" 
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-20 border bg-[#EDE2DE] group-hover:bg-[#7A5C54] group-focus:ring-4 group-focus:ring-white">
+                    <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                    </svg>
+                </span>
+            </button>
+            <button @click="nextSlide" type="button" 
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-20 border bg-[#EDE2DE] group-hover:bg-[#7A5C54] group-focus:ring-4 group-focus:ring-white">
+                    <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                    </svg>
+                </span>
+            </button>
         </div>
-  
-        <!-- Slider controls -->
-        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-          <span class="inline-flex items-center justify-center w-10 h-20 border bg-[#EDE2DE] group-hover:bg-[#7A5C54] group-focus:ring-4 group-focus:ring-white">
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-            </svg>
-          </span>
-        </button>
-        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span class="inline-flex items-center justify-center w-10 h-20 border bg-[#EDE2DE] group-hover:bg-[#7A5C54] group-focus:ring-4 group-focus:ring-white">
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-            </svg>
-          </span>
-        </button>
-      </div>
     </div>
-  </section>
+</section>
 {% endblock %}
