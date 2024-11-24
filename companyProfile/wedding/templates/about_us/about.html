@@ -6,24 +6,22 @@
 
 {% block content %}
 <section id="about-head">
-    <div class = "flex z-1 flex-col justify-center items-center px-32 py-16">
+    <div class = "flex z-1 flex-col justify-center items-center my-8 max-w-7xl mx-auto">
         <h1 class="text-6xl font-semibold mb-8 text-[#342220]">About Us</h1>
-        <h2 class="text-center px-7 mb-4">Our team is dedicated to making your big day as beautiful as your love story</h2>
+        <h2 class="text-center mb-4">Our team is dedicated to making your big day as beautiful as your love story</h2>
+        <div class="flex justify-center items-center w-[100%] mx-auto">
+            <div class="w-full flex justify-center">
+                <img src="{{ MEDIA_URL }}/abouttt.png" alt="" class="max-w-[3000px] h-auto object-cover">
+            </div>
+        </div>
     </div>
 </section>
-
-<section id="about-image" class="flex justify-center items-center w-[90%] mx-auto">
-    <div class="w-full flex justify-center">
-        <img src="{{ MEDIA_URL }}/aboutmutiara.png" alt="" class="mt-5 w-[92%] h-auto object-cover">
-    </div>
-</section>
-
 
 
 
 <section id="about-visionmision" class="mt-5 mr-5">
-    <div class="mt-5 mx-40"> <!-- Adjusted left margin here -->
-        <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Vision & Mission</h2>
+    <div class="my-8 max-w-7xl mx-auto"> <!-- Adjusted left margin here -->
+        <h2 class="mt-4 text-4xl font-semibold leading-none  text-stone-800">Vision & Mission</h2>
         <div class="columns-2 mt-4">
             <p class="pe-10 leading-5 text-justify">
                 Our Vision is "To become a leading wedding organizer company that known for creating a unique, 
@@ -44,10 +42,10 @@
 
 
 <section id="about-companystory">
-    <div class="mt-5 mx-64">
-        <div class="columns-2 mt-4">
+    <div class="mt-5 max-w-7xl mx-auto">
+        <div class="columns-2 my-8">
             <img src="{{ MEDIA_URL }}/company-story.png" alt="" class="h-auto w-[1000px] pe-10">
-            <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Company Story</h2>
+            <h2 class="mt-4 text-4xl font-semibold leading-none text-stone-800">Company Story</h2>
             <p class="leading-5 text-justify mt-5">
                 Founded by a group of five friends with a shared passion for celebrating love, our wedding organizer was born out of a desire to create meaningful, unforgettable wedding experiences. Each of us brings unique talents and perspectives, from design and planning to coordination and creativity, which together allow us to craft one-of-a-kind celebrations. 
 
@@ -60,7 +58,7 @@
 
 <section class="about-testimonials mb-5">
     <div class="mt-5 mx-32">
-        <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Testimonials</h2>
+        <h2 class="mt-4 text-4xl font-semibold leading-none text-stone-800">Testimonials</h2>
         
         <div x-data="{ 
             activeSlide: 0,

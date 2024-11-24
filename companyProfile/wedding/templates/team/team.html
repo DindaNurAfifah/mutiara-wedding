@@ -5,13 +5,13 @@
 {% block content %}
 
     <!-- Meet Our Team Section -->
-    <section class="container mx-auto my-16 text-center">
+    <section class="container max-w-7xl mx-auto my-8 text-center">
         <h1 class="text-6xl font-semibold mb-8 text-[#342220]">Meet Our Team</h1>
         <h2 class="text-center px-7 mb-4">We bring dreams to life with our passionate and skilled team. Each member is dedicated to making every wedding unique and special as we celebrate.</h2>
         <div class="flex justify-center space-x-12">
             <!-- Team Member Cards -->
              {% for team in card_team %}
-             <div class="bg-white rounded-lg shadow-lg w-48 h-64 border-neutral-900">
+             <div class="bg-white rounded-lg shadow-lg w-64 h-[200px] border-neutral-900">
                 <!-- Menambahkan object-fit dan fixed aspect ratio -->
                 <div class="w-full h-40 mb-4 overflow-hidden rounded-md">
                     <img 
@@ -27,9 +27,9 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="container mx-auto my-16" x-data="{ open: false, open1: false, open2: false, open3: false, open4: false}">
+    <section class="container max-w-7xl mx-auto  my-16" x-data="{ open: false, open1: false, open2: false, open3: false, open4: false}">
         <h2 class="text-4xl font-semibold text-center mb-8">Frequently Asked Questions</h2>
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto space-y-4">
+        <div class="bg-white p-8 rounded-lg shadow-lg space-y-4 max-w-7xl mx-auto">
             <!-- FAQ Items -->
             <div class="border-b">
                 <button @click="open = ! open" type="button" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">

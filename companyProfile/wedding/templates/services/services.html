@@ -4,19 +4,19 @@
     Services
 {% endblock %}
 {% block content %}
-    <div class="flex z-1 flex-col justify-center items-center px-32 py-16">
+    <div class="max-w-7xl mx-auto flex z-10 flex-col justify-center items-center my-8">
         <h2 class="text-6xl font-semibold mb-8 text-[#342220]">Our Services</h2>
-        <h2 class="text-center px-7 mb-4">Our services are designed to reflect your personal style and love story, creating a celebration that is as memorable as the love it honors. Trust us to handle every detail, so you can enjoy each magical moment with ease.</h2>
-        <div class="flex flex-col xl:flex-row justify-center items-center gap-8 my-8">
-            <div class="flex flex-col justify-start items-start w-full xl:w-1/2">
-                <h1 class="text-4xl text-[#342220]">Mutiara Wedding Services</h1>
-                <h2>From full-service planning to day-of coordination, we&apos;re here to make your wedding journey smooth and unforgettable. Our team works closely with you to design a celebration that captures your style and love story, creating a day that you and your guests will cherish forever.</h2>
+        <h2 class="text-center">Our services are designed to reflect your personal style and love story, creating a celebration that is as memorable as the love it honors. Trust us to handle every detail, so you can enjoy each magical moment with ease.</h2>
+        <div class="max-w-7xl flex flex-col xl:flex-row justify-center items-center gap-12 my-8">
+            <div class="max-w-7xl mx-auto flex flex-col justify-start items-start w-full xl:w-1/2">
+                <h1 class="text-4xl font-semibold text-[#342220] mb-4">Mutiara Wedding Services</h1>
+                <h2 class="text-justify">From full-service planning to day-of coordination, we&apos;re here to make your wedding journey smooth and unforgettable. Our team works closely with you to design a celebration that captures your style and love story, creating a day that you and your guests will cherish forever.</h2>
             </div>
             <div>
                 <img src="{{ MEDIA_URL }}/image1.png" alt="Mutiara Wedding">
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 my-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 my-8">
             {% for card in cards %}
                 <div class="max-w-72 min-h-[30.5rem] flex flex-col justify-between items-center text-center gap-1 shadow">
                     <img src="{{ MEDIA_URL }}{{ card.image }}" alt="{{ card.title }}" class="shadow-lg w-full h-auto">
@@ -27,11 +27,11 @@
                         <div x-transition x-show="open" class="fixed top-0 left-0 w-full h-screen bg-black/80 flex justify-center items-center">
                             <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md w-1/2">
                                 <h2 class="mb-2 text-2xl font-bold text-gray">{{ card.title }}</h2>
-                                <div class="flex flex-row justify-center items-center gap-4 my-8">
+                                <div class="flex flex-row justify-center items-center gap-4 my-8 ">
                                     <div class="h-auto">
                                         <img src="{{ MEDIA_URL }}{{ card.image }}" alt="Mutiara Wedding" class="w-full h-auto object-contain">
                                     </div>
-                                    <p class="mb-4 font-normal text-gray-700 text-start w-1/2">
+                                    <p class="mb-4 font-normal text-gray-700 w-1/2 text-justify">
                                         {{ card.cardDescription }}
                                     </p>
                                 </div>
