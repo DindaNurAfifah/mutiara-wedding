@@ -6,13 +6,19 @@
 
     <!-- Meet Our Team Section -->
     <section class="container mx-auto my-16 text-center">
-        <h2 class="text-6xl font-semibold mb-8 text-[#342220]">Meet Our Team</h2>
-        <p class="text-lg text-[#000000] mb-12">We bring dreams to life with our passionate and skilled team. Each member is dedicated to making every wedding unique and special as we celebrate.</p>
+        <h1 class="text-6xl font-semibold mb-8 text-[#342220]">Meet Our Team</h1>
+        <h2 class="text-center px-7 mb-4">We bring dreams to life with our passionate and skilled team. Each member is dedicated to making every wedding unique and special as we celebrate.</h2>
         <div class="flex justify-center space-x-12">
             <!-- Team Member Cards -->
              {% for team in card_team %}
-             <div class="bg-white rounded-lg shadow-lg w-48 h-60 border-neutral-900">
-                <img src="{{ MEDIA_URL }}{{ team.image }}" alt="Member Image" class="w-full h-32 mx-auto rounded-md mb-4 ">
+             <div class="bg-white rounded-lg shadow-lg w-48 h-64 border-neutral-900">
+                <!-- Menambahkan object-fit dan fixed aspect ratio -->
+                <div class="w-full h-40 mb-4 overflow-hidden rounded-md">
+                    <img 
+                        src="{{ MEDIA_URL }}{{ team.image }}" 
+                        alt="Member Image" 
+                        class="w-full h-full object-cover">
+                </div>
                 <h3 class="text-xl font-semibold">{{ team.name }}</h3>
                 <p class="text-gray-600">{{ team.Position }}</p>
             </div>

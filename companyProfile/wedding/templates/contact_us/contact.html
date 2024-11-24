@@ -77,14 +77,17 @@
     <!-- Contact Info -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="text-center border border-gray-300 p-4 rounded-md shadow-lg">
+        <i class="fa-solid fa-envelope"></i>
         <h3 class="font-semibold mb-2">E-mail</h3>
         <p class="text-gray-600">info@mutiarawedding.com</p>
       </div>
       <div class="text-center border border-gray-300 p-4 rounded-md shadow-lg">
+        <i class="fa-solid fa-phone"></i>
         <h3 class="font-semibold mb-2">Phone Number</h3>
         <p class="text-gray-600">+62 123 456 789</p>
       </div>
       <div class="text-center border border-gray-300 p-4 rounded-md shadow-lg">
+        <i class="fa-solid fa-location-dot"></i>
         <h3 class="font-semibold mb-2">Address</h3>
         <p class="text-gray-600">Jl. Sambaliung, Sempaja Sel., Kec. Samarinda Utara, Kota Samarinda, Kalimantan Timur 75242</p>  
       </div>
@@ -92,25 +95,26 @@
   </div>
 
   <!-- Map and Operating Hours -->
-  <div class="mt-12 flex justify-center items-start space-x-8">
-    <!-- Map -->
-    <div class="border rounded-lg overflow-hidden">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTknMTEuNiJTIDEwNMKwNDUnNDkuOCJF!5e0!3m2!1sen!2sid!4v1620812345678!5m2!1sen!2sid"
-        width="600"
-        height="500"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-    </div>
-
-    <!-- Operating Hours -->
-    <div class="bg-white p-6 border rounded-lg shadow-md">
-      <h3 class="font-semibold mb-4 text-center">Operational Hours</h3>
-      <p class="text-gray-600 text-center">Monday to Friday: 9 AM - 5 PM</p>
-      <p class="text-gray-600 text-center">Saturday & Sunday: 9 AM - 1 PM</p>
-    </div>
+<div class="mt-12 flex justify-center items-start space-x-8">
+  <!-- Map -->
+  <div class="border rounded-lg overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTknMTEuNiJTIDEwNMKwNDUnNDkuOCJF!5e0!3m2!1sen!2sid!4v1620812345678!5m2!1sen!2sid"
+      width="600"
+      height="500"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
   </div>
+
+  <!-- Operating Hours -->
+  <div class="bg-white p-6 border rounded-lg shadow-md h-[500px] flex flex-col justify-center w-64">
+    <i class="fa-solid fa-clock text-center"></i>
+    <h3 class="font-semibold mb-4 text-center">Operational Hours</h3>
+    <p class="text-gray-600 text-center">Monday to Friday: 9 AM - 5 PM</p>
+    <p class="text-gray-600 text-center">Saturday & Sunday: 9 AM - 1 PM</p>
+  </div>
+</div>
 </section>
 {% endblock %}

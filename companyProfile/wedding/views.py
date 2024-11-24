@@ -57,6 +57,22 @@ def gallery_view(request):
             {"url": "gallery1.png"},
             {"url": "gallery2.png"},
             {"url": "gallery3.png"},
+            {"url": "gallery4.png"},
+            {"url": "gallery5.png"},
+            {"url": "gallery6.png"},
+            {"url": "gallery7.png"},
+            {"url": "gallery8.png"},
+            {"url": "gallery9.png"},
+            {"url": "gallery10.png"},
+            {"url": "gallery11.png"},
+            {"url": "gallery12.png"},
+            {"url": "gallery13.png"},
+            {"url": "gallery14.png"},
+            {"url": "gallery15.png"},
+            {"url": "gallery16.png"},
+            {"url": "gallery17.png"},
+            {"url": "gallery18.png"},
+            
         ],
     }
     return render(request, "gallery/gallery.html", context)

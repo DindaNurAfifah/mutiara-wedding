@@ -6,38 +6,42 @@
 
 {% block content %}
 <section id="about-head">
-    <div>
-        <h1 class="mt-5 text-5xl mx-100 flex items-center justify-center font-semibold ">About Us</h1>
-        <p class="mt-3 flex items-center justify-center font-medium">Our team is dedicated to making your big day as beautiful as your love story</p>
+    <div class = "flex z-1 flex-col justify-center items-center px-32 py-16">
+        <h1 class="text-6xl font-semibold mb-8 text-[#342220]">About Us</h1>
+        <h2 class="text-center px-7 mb-4">Our team is dedicated to making your big day as beautiful as your love story</h2>
     </div>
 </section>
 
-<section id="about-image" class="flex justify-center items-center">
-    <div>
-        <img src="{{ MEDIA_URL }}/aboutmutiara.png" alt="" class="mt-5 items-center justify-center max-w-full h-auto">
+<section id="about-image" class="flex justify-center items-center w-[90%] mx-auto">
+    <div class="w-full flex justify-center">
+        <img src="{{ MEDIA_URL }}/aboutmutiara.png" alt="" class="mt-5 w-[92%] h-auto object-cover">
     </div>
 </section>
 
-<section id="about-visionmision" class="mt-5">
-    <div class="mt-5 mx-64">
+
+
+
+<section id="about-visionmision" class="mt-5 mr-5">
+    <div class="mt-5 mx-40"> <!-- Adjusted left margin here -->
         <h2 class="mt-4 text-3xl font-semibold leading-none max-w-[263px] text-stone-800">Vision & Mission</h2>
-            <div class="columns-2 mt-4">
-              <p class="pe-10 leading-5 text-justify">
+        <div class="columns-2 mt-4">
+            <p class="pe-10 leading-5 text-justify">
                 Our Vision is "To become a leading wedding organizer company that known for creating a unique, 
                 personalized, and unforgettable celebrations of love." We aspire to set a new standard in the 
                 wedding industry by designing extraordinary weddings that authentically reflect each couple’s 
                 love story. Our vision is to bring creativity, passion, and a personal touch to every celebration, 
                 ensuring that each wedding is as memorable as the love it celebrates.</p>
 
-              <p class="leading-5 text-justify"> 
+            <p class="leading-5 text-justify"> 
                 Our mission is to craft weddings that embody the dreams of our clients, focusing on every detail 
                 to create seamless, joyful experiences. We believe in innovation and creativity, always seeking 
                 fresh ideas to make each celebration one-of-a-kind. Through dedication to quality, excellence, 
                 and genuine relationships, we aim to make the wedding planning journey enjoyable, stress-free, 
                 and deeply meaningful for every couple we serve.</p>
-            </div>
+        </div>
     </div>
 </section>
+
 
 <section id="about-companystory">
     <div class="mt-5 mx-64">
