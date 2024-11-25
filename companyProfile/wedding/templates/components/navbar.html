@@ -1,27 +1,46 @@
-<nav class="flex flex-row justify-between items-center w-screen h-[130px] text-sm px-8 font-thin">
-    <ul class="ml-10">
-        <img src="{{ MEDIA_URL }}/mutiara_logo.png" alt="Mutiara Wedding">
-    </ul>
-    <ul class="flex flex-row justify-center gap-8 ml-[-5rem]">
-        <li>
-            <a href="{% url 'homepage' %}" class="text-[#7A5C54] font-normal text-[1.1rem] hover:font-bold duration-200 ease-in-out">Home</a>
-        </li>
-        <li>
-            <a href="{% url 'about/' %}" class="text-[#7A5C54] font-normal text-[1.1rem] hover:font-bold duration-200 ease-in-out">About</a>
-        </li>
-        <li>
-            <a href="{% url 'gallery' %}" class="text-[#7A5C54] font-normal text-[1.1rem] hover:font-bold duration-200 ease-in-out">Gallery</a>
-        </li>
-        <li>
-            <a href="{% url 'team' %}" class="text-[#7A5C54] font-normal text-[1.1rem] hover:font-bold duration-200 ease-in-out">Team</a>
-        </li>
-        <li>
-            <a href="{% url 'services' %}" class="text-[#7A5C54] font-normal text-[1.1rem] hover:font-bold duration-200 ease-in-out">Services</a>
-        </li>
-    </ul>
-    <ul>
-        <a href="{% url 'contact/' %}" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold duration-200 ease-in-out active:bg-[#342220] active:font-normal ml-2 mr-24"> 
-            Book Now
-        </a>
-    </ul>
-</nav>
+<div class="flex flex-row justify-center items-center w-full border-b">
+    <nav class="flex flex-row justify-between items-center font-thin text-sm gap-8 max-w-7xl">
+        <ul class="">
+            <img src="{{ MEDIA_URL }}/mutiara_logo.png" alt="Mutiara Wedding" />
+        </ul>
+        <ul class="flex flex-row justify-center items-center gap-8">
+            {% with request.resolver_match.url_name as url_name %}
+            <li>
+                <a href="{% url 'homepage' %}" 
+                   class="{% if url_name == 'homepage' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}" 
+                   class="{% if url_name == 'about' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'gallery' %}" 
+                   class="{% if url_name == 'gallery' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                    Gallery
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'team' %}" 
+                   class="{% if url_name == 'team' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                    Team
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'services' %}" 
+                   class="{% if url_name == 'services' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                    Services
+                </a>
+            </li>
+            {% endwith %}
+        </ul>
+        <ul>
+            <a href="{% url 'contact' %}" class="bg-[#7A5C54] font-normal text-white px-5 py-3 rounded-md hover:bg-[#7A5C54] hover:font-bold duration-200 ease-in-out active:bg-[#342220] active:font-normal ml-2 mr-24"> 
+                Book Now
+            </a>
+        </ul>
+    </nav>
+</div>

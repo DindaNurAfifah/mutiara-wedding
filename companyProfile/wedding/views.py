@@ -6,53 +6,48 @@ def contact_view(request):
     if request.method == "POST":
         # Handle form submission here
         pass
-    context = {"MEDIA_URL": settings.MEDIA_URL}
+    context = {
+        "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "contact",
+    }
     return render(request, "contact_us/contact.html", context)
 
 
 def team_view(request):
     context = {
         "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "team",
         "card_team": [
-            {
-                "name": "Anandiaz Agung Pradana",
-                "Position": "Leader",
-                "image": "anan.png",
-            },
+            {"name": "Anandiaz Agung Pradana", "Position": "Leader", "image": "anan.png"},
             {"name": "Ryan Jusniansyah", "Position": "Vice Leader", "image": "aku.png"},
-            {
-                "name": "Dinda Nur Afifah",
-                "Position": "Member 1",
-                "image": "Mbadinda.png",
-            },
-            {
-                "name": "Rafly Genta Pratama",
-                "Position": "Member 2",
-                "image": "Genta.png",
-            },
-            {
-                "name": "Gusti Dimas Novarossi",
-                "Position": "Member 3",
-                "image": "Banggusti.png",
-            },
+            {"name": "Dinda Nur Afifah", "Position": "Member 1", "image": "Mbadinda.png"},
+            {"name": "Rafly Genta Pratama", "Position": "Member 2", "image": "Genta.png"},
+            {"name": "Gusti Dimas Novarossi", "Position": "Member 3", "image": "Banggusti.png"},
         ],
     }
     return render(request, "team/team.html", context)
 
 
 def home_view(request):
-    context = {"MEDIA_URL": settings.MEDIA_URL}
+    context = {
+        "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "homepage",
+    }
     return render(request, "homepage/homepage.html", context)
 
 
 def about_view(request):
-    context = {"MEDIA_URL": settings.MEDIA_URL}
+    context = {
+        "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "about",
+    }
     return render(request, "about_us/about.html", context)
 
 
 def gallery_view(request):
     context = {
         "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "gallery",
         "images": [
             {"url": "gallery1.png"},
             {"url": "gallery2.png"},
@@ -72,7 +67,6 @@ def gallery_view(request):
             {"url": "gallery16.png"},
             {"url": "gallery17.png"},
             {"url": "gallery18.png"},
-            
         ],
     }
     return render(request, "gallery/gallery.html", context)
@@ -81,6 +75,7 @@ def gallery_view(request):
 def services_view(request):
     context = {
         "MEDIA_URL": settings.MEDIA_URL,
+        "active_page": "services",
         "cards": [
             {
                 "title": "Full Wedding Planning",

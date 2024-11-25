@@ -6,14 +6,14 @@
 
     <!-- Meet Our Team Section -->
     <section class="container max-w-7xl mx-auto my-8 text-center">
-        <h1 class="text-6xl font-semibold mb-8 text-[#342220]">Meet Our Team</h1>
+        <h1 class="text-6xl font-semibold text-[#342220] mb-8">Meet Our Team</h1>
         <h2 class="text-center px-7 mb-4">We bring dreams to life with our passionate and skilled team. Each member is dedicated to making every wedding unique and special as we celebrate.</h2>
         <div class="flex justify-center space-x-12">
             <!-- Team Member Cards -->
              {% for team in card_team %}
              <div class="bg-white rounded-lg shadow-lg w-64 h-[200px] border-neutral-900">
                 <!-- Menambahkan object-fit dan fixed aspect ratio -->
-                <div class="w-full h-40 mb-4 overflow-hidden rounded-md">
+                <div class="w-full h-40 overflow-hidden rounded-md">
                     <img 
                         src="{{ MEDIA_URL }}{{ team.image }}" 
                         alt="Member Image" 
