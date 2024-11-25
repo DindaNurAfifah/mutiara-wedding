@@ -11,9 +11,9 @@
         <div class="flex justify-center space-x-12">
             <!-- Team Member Cards -->
              {% for team in card_team %}
-             <div class="bg-white rounded-lg shadow-lg w-64 h-[200px] border-neutral-900">
+             <div class="bg-white rounded-lg shadow-lg w-64 h-[300px] border-neutral-900 hover:bg-[#EDE2DE]">
                 <!-- Menambahkan object-fit dan fixed aspect ratio -->
-                <div class="w-full h-40 overflow-hidden rounded-md">
+                <div class="w-full h-42 overflow-hidden rounded-md">
                     <img 
                         src="{{ MEDIA_URL }}{{ team.image }}" 
                         alt="Member Image" 
@@ -32,7 +32,7 @@
         <div class="bg-white p-8 rounded-lg shadow-lg space-y-4 max-w-7xl mx-auto">
             <!-- FAQ Items -->
             <div class="border-b">
-                <button @click="open = ! open" type="button" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">
+                <button @click="open = ! open" type="button" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none hover:bg-[#EDE2DE]">
                     What services does Mutiara Wedding offer?
                     <span>+</span>
                 </button>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="border-b">
-                <button  @click="open1 = ! open1" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">
+                <button  @click="open1 = ! open1" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none hover:bg-[#EDE2DE]">
                     Can I customize my wedding package?
                     <span>+</span>
                 </button>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="border-b">
-                <button @click="open2 = ! open2" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">
+                <button @click="open2 = ! open2" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none hover:bg-[#EDE2DE]">
                     Do you provide wedding coordination on the day of the event?
                     <span>+</span>
                 </button>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="border-b">
-                <button @click="open3 = ! open3" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">
+                <button @click="open3 = ! open3" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none hover:bg-[#EDE2DE]">
                     How early should I book Mutiara Wedding for my event?
                     <span>+</span>
                 </button>
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="border-b">
-                <button @click="open4 = ! open4" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none">
+                <button @click="open4 = ! open4" class="flex justify-between w-full text-left py-4 text-lg font-semibold text-gray-700 focus:outline-none hover:bg-[#EDE2DE]">
                     Do you work with specific vendors?
                     <span>+</span>
                 </button>
