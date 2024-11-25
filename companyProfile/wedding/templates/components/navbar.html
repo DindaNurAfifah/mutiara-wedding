@@ -7,31 +7,31 @@
             {% with request.resolver_match.url_name as url_name %}
             <li>
                 <a href="{% url 'homepage' %}" 
-                   class="{% if url_name == 'homepage' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                   class="{% if url_name == 'homepage' %}font-bold {% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
                     Home
                 </a>
             </li>
             <li>
                 <a href="{% url 'about' %}" 
-                   class="{% if url_name == 'about' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                   class="{% if url_name == 'about' %}font-bold {% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
                     About
                 </a>
             </li>
             <li>
                 <a href="{% url 'gallery' %}" 
-                   class="{% if url_name == 'gallery' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                   class="{% if url_name == 'gallery' %}font-bold {% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
                     Gallery
                 </a>
             </li>
             <li>
                 <a href="{% url 'team' %}" 
-                   class="{% if url_name == 'team' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                   class="{% if url_name == 'team' %}font-bold {% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
                     Team
                 </a>
             </li>
             <li>
                 <a href="{% url 'services' %}" 
-                   class="{% if url_name == 'services' %}font-bold underline{% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
+                   class="{% if url_name == 'services' %}font-bold {% endif %} text-[#7A5C54] text-[1.1rem] hover:font-bold duration-200 ease-in-out">
                     Services
                 </a>
             </li>
