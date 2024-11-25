@@ -7,8 +7,8 @@
     <div class="max-w-7xl mx-auto flex z-10 flex-col justify-center items-center my-8">
         <h2 class="text-6xl font-semibold text-[#342220] mb-8">Our Services</h2>
         <h2 class="text-center mb-4">Our services are designed to reflect your personal style and love story, creating a celebration that is as memorable as the love it honors. Trust us to handle every detail, so you can enjoy each magical moment with ease.</h2>
-        <div class="max-w-7xl flex flex-col xl:flex-row xl:justify-between items-center">
-            <div class="max-w-7xl mx-auto flex flex-col justify-start items-start w-full xl:w-1/2">
+        <div class="max-w-7xl flex xl:justify-between items-center pr-8">
+            <div class="max-w-7xl mx-auto flex flex-col justify-start items-start w-full xl:w-1/2 pr-8">
                 <h1 class="text-4xl font-semibold text-[#342220] mb-4">Mutiara Wedding Services</h1>
                 <h2 class="text-justify mb-4">From full-service planning to day-of coordination, we&apos;re here to make your wedding journey smooth and unforgettable. Our team works closely with you to design a celebration that captures your style and love story, creating a day that you and your guests will cherish forever.</h2>
             </div>
@@ -18,12 +18,12 @@
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
             {% for card in cards %}
-                <div class="max-w-72 min-h-[30.5rem] flex flex-col justify-between items-center text-center gap-1 shadow">
+                <div class="max-w-72 min-h-[31.5rem] flex flex-col justify-between items-center text-center gap-1 shadow">
                     <img src="{{ MEDIA_URL }}{{ card.image }}" alt="{{ card.title }}" class="shadow-lg w-full h-auto">
                     <h2 class="text-2xl mt-1">{{ card.title }}</h2>
                     <p class="text-sm p-2">{{ card.description }}</p>
                     <div x-data = "{ open : false }">
-                        <button @click="open = true" class="bg-[#7A5C54] text-white p-2 mb-1 rounded font-thin hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">Book Now</button>
+                        <button @click="open = true" class="bg-[#7A5C54] text-white p-2 mb-4 rounded font-thin hover:bg-[#7A5C54] hover:font-bold active:bg-[#342220] active:font-normal">Book Now</button>
                         <div x-transition x-show="open" class="fixed top-0 left-0 w-full h-screen bg-black/80 flex justify-center items-center">
                             <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md w-1/2">
                                 <h2 class="mb-2 text-2xl font-bold text-gray">{{ card.title }}</h2>
